@@ -11,6 +11,7 @@ void main() {
 
     System.out.println("Числа " + FirstNum + " и " + SecondNum + ". Выбирите оператор (+ - * /).");
     String operation = in.next();
+
     switch (operation) {
         case ("+"):
             System.out.println(FirstNum + SecondNum);
@@ -19,6 +20,10 @@ void main() {
             System.out.println(FirstNum - SecondNum);
             break;
         case ("*"):
+            if (FirstNum == 0) {
+                System.out.println("На ноль делить нельзя");
+                break;
+            }
             System.out.println(FirstNum * SecondNum);
             break;
         case ("/"):
